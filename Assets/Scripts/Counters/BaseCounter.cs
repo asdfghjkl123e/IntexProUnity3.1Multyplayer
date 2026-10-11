@@ -39,4 +39,9 @@ public class BaseCounter : MonoBehaviour, IKitchenObjectParent
     {
         return counterTopPoint;
     }
+
+    void Update()
+    {
+        
+    }
 }

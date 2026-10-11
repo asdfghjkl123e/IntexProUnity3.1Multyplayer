@@ -5,6 +5,8 @@ public class CuttingCounter : BaseCounter, IKitchenObjectParent
 {
     public event EventHandler<OnProgressChangedEventArgs> OnProgressChanged;
 
+    public event EventHandler OnCut;
+
     public class OnProgressChangedEventArgs : EventArgs
     {
         public float progressNormilized;
@@ -45,6 +47,16 @@ public class CuttingCounter : BaseCounter, IKitchenObjectParent
             }
             else
             {
+                if (HasRecipeWithInput(this.GetKitchenObject().GetKitchenObjectSO()))
+                {
+                    cuttingProgress = 0;
+
+                    CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSoWithInput(GetKitchenObject().GetKitchenObjectSO());
+                    OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs
+                    {
+                        progressNormilized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax
+                    });
+                }
                 GetKitchenObject().SetkitchenObjectParent(player);
             }
         }
@@ -55,6 +67,9 @@ public class CuttingCounter : BaseCounter, IKitchenObjectParent
         if(HasKitchenObject() && HasRecipeWithInput(GetKitchenObject().GetKitchenObjectSO()))
         {
             cuttingProgress ++;
+
+            OnCut?.Invoke(this, EventArgs.Empty);
+
             CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSoWithInput(GetKitchenObject().GetKitchenObjectSO());
             OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs
             {

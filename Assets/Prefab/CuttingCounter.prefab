@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8499979675000849978}
   - component: {fileID: 6929611128887626939}
   - component: {fileID: 2775851138893560378}
+  - component: {fileID: 1117418800032331387}
   m_Layer: 5
   m_Name: CuttingUI
   m_TagString: Untagged
@@ -119,6 +120,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProgressBarUI
   cuttingCounter: {fileID: 7139210300071120494}
   barImage: {fileID: 8876051396916425799}
+--- !u!114 &1117418800032331387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3179408161779274568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2626ce7fc8a3a478cc9d831eefb9a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookAtCamera
 --- !u!1 &3298003836233506475
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,13 +353,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: d72bee846803d074784ffb8f64e993ca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7313057169547213291}
   m_SourcePrefab: {fileID: 100100000, guid: d72bee846803d074784ffb8f64e993ca, type: 3}
 --- !u!4 &1910498616565939412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4589716710238282923, guid: d72bee846803d074784ffb8f64e993ca, type: 3}
   m_PrefabInstance: {fileID: 2680353545854965887}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1910498616565939413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4589716710238282922, guid: d72bee846803d074784ffb8f64e993ca, type: 3}
+  m_PrefabInstance: {fileID: 2680353545854965887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7313057169547213291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910498616565939413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788b4a95bcbfcba41bab917584596149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CuttingCounterVisual
+  cuttingCounter: {fileID: 7139210300071120494}
 --- !u!1001 &3419335482579518918
 PrefabInstance:
   m_ObjectHideFlags: 0
