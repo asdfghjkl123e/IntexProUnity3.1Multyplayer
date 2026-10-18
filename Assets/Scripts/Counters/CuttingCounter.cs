@@ -1,11 +1,11 @@
 using System;
 using UnityEngine;
 
-public class CuttingCounter : BaseCounter, IKitchenObjectParent
+public class CuttingCounter : BaseCounter, IHasProgress
 {
-    public event EventHandler<OnProgressChangedEventArgs> OnProgressChanged;
 
     public event EventHandler OnCut;
+    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
 
     public class OnProgressChangedEventArgs : EventArgs
     {
@@ -28,7 +28,7 @@ public class CuttingCounter : BaseCounter, IKitchenObjectParent
                     cuttingProgress = 0;
 
                     CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSoWithInput(GetKitchenObject().GetKitchenObjectSO());
-                    OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs
+                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
                     {
                         progressNormilized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax
                     });
@@ -52,7 +52,7 @@ public class CuttingCounter : BaseCounter, IKitchenObjectParent
                     cuttingProgress = 0;
 
                     CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSoWithInput(GetKitchenObject().GetKitchenObjectSO());
-                    OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs
+                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
                     {
                         progressNormilized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax
                     });
@@ -71,7 +71,7 @@ public class CuttingCounter : BaseCounter, IKitchenObjectParent
             OnCut?.Invoke(this, EventArgs.Empty);
 
             CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSoWithInput(GetKitchenObject().GetKitchenObjectSO());
-            OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs
+            OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
             {
                 progressNormilized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax
             });

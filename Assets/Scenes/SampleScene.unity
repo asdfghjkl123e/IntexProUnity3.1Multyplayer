@@ -304,9 +304,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2569645410422634191, guid: bb3c0d1f4badb8946a7ea6fa3718ba15, type: 3}
+      propertyPath: mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2715381412889654797, guid: bb3c0d1f4badb8946a7ea6fa3718ba15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3334379164271269521, guid: bb3c0d1f4badb8946a7ea6fa3718ba15, type: 3}
       propertyPath: m_Name
       value: StowCounter
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689396259537322946, guid: bb3c0d1f4badb8946a7ea6fa3718ba15, type: 3}
+      propertyPath: burningRecipeSOs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689396259537322946, guid: bb3c0d1f4badb8946a7ea6fa3718ba15, type: 3}
+      propertyPath: 'burningRecipeSOs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ec034b410289e1429ab3b35b1d3fa79, type: 2}
+    - target: {fileID: 5689396259537322946, guid: bb3c0d1f4badb8946a7ea6fa3718ba15, type: 3}
+      propertyPath: burningRecipeSOArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689396259537322946, guid: bb3c0d1f4badb8946a7ea6fa3718ba15, type: 3}
+      propertyPath: 'burningRecipeSOArray.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ec034b410289e1429ab3b35b1d3fa79, type: 2}
+    - target: {fileID: 7917764265149636996, guid: bb3c0d1f4badb8946a7ea6fa3718ba15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1399,6 +1427,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af790be0d36d8a41bcd72b38806706b, type: 3}
+--- !u!1001 &1762938428
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6093621273706844075, guid: 1a14ef4485b6c7d46af9fee35377f095, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093621273706844075, guid: 1a14ef4485b6c7d46af9fee35377f095, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093621273706844075, guid: 1a14ef4485b6c7d46af9fee35377f095, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093621273706844075, guid: 1a14ef4485b6c7d46af9fee35377f095, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093621273706844075, guid: 1a14ef4485b6c7d46af9fee35377f095, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093621273706844075, guid: 1a14ef4485b6c7d46af9fee35377f095, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093621273706844075, guid: 1a14ef4485b6c7d46af9fee35377f095, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093621273706844075, guid: 1a14ef4485b6c7d46af9fee35377f095, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093621273706844075, guid: 1a14ef4485b6c7d46af9fee35377f095, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093621273706844075, guid: 1a14ef4485b6c7d46af9fee35377f095, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313727356847825864, guid: 1a14ef4485b6c7d46af9fee35377f095, type: 3}
+      propertyPath: m_Name
+      value: PlateCounter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1a14ef4485b6c7d46af9fee35377f095, type: 3}
 --- !u!1001 &1769586121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1790,3 +1875,4 @@ SceneRoots:
   - {fileID: 1550013793}
   - {fileID: 309656939}
   - {fileID: 1329113244}
+  - {fileID: 1762938428}
