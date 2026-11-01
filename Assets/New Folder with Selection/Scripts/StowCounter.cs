@@ -143,22 +143,20 @@ public class StowCounter : BaseCounter, IHasProgress
         {
             if (player.HasKitchenObject())
             {
-                //nothing
+                if(player.GetKitchenObject() is PLateKitchenObject)
+                {
+                    if (player.GetKitchenObject().TryGetPlate(out PLateKitchenObject pLateKitchenObject))
+                    {
+                            if (pLateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO()))
+                            {
+                                GetKitchenObject().DestroySelf();
+                            }
+                    }
+                }
             }
             else
             {
                 GetKitchenObject().SetkitchenObjectParent(player);
-                state = State.Idle;
-                OnStateChanged?.Invoke(this, new OnStateChangedEventArgs
-                {
-                    state = state
-                });
-
-
-                OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
-                {
-                    progressNormilized = 0f
-                });
             }
         }
     }
