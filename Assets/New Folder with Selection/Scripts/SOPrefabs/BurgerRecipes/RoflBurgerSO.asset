@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c82aeba5029bebe4e9440a9d0579f269, type: 3}
+  m_Name: RoflBurgerSO
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeSO
+  kitchenObjectSOList:
+  - {fileID: 11400000, guid: 71827d9a3dbce2d4b933270f770a9b33, type: 2}
+  - {fileID: 11400000, guid: a757cda71e219064689269e654a599af, type: 2}
+  - {fileID: 11400000, guid: a757cda71e219064689269e654a599af, type: 2}
+  - {fileID: 11400000, guid: a757cda71e219064689269e654a599af, type: 2}
+  - {fileID: 11400000, guid: 396769c1e90612644a0102abace6bca5, type: 2}
+  recipeName: RoflBurger
